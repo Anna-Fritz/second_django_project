@@ -1,0 +1,19 @@
+# Virtuelle Umgebungen
+venv/
+env/
+
+# Django-Standard-Dateien
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Umgebungsdateien
+.env
+
+# Media-Dateien (falls du ein Verzeichnis für hochgeladene Dateien hast)
+media/
+
+# Weitere Django-spezifische Dateien
+*.sqlite3
