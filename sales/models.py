@@ -10,10 +10,20 @@ class Customer(models.Model):
     account = models.FloatField(blank=True, null=True)
     # one-to-many Order
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def save(self, *args, **kwargs):
+        print(f"new first name {self.first_name} has been saved")
+        super().save(*args, **kwargs)
+
 
 class Product(models.Model):
     name = models.CharField(max_length=30)
     price = models.FloatField()
+
+    def __str__(self):
+        return f"{self.name} ({self.price})"
 
 
 class Bill(models.Model):
@@ -36,3 +46,7 @@ class Producttype(models.Model):
     type_name = models.CharField(max_length=30)
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.type_name}"
+
