@@ -17,3 +17,6 @@ media/
 
 # Weitere Django-spezifische Dateien
 *.sqlite3
+
+# Ignoriere fill_db.py
+fill_db.py
