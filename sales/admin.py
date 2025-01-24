@@ -6,7 +6,7 @@ from .models import Customer, Order, Product, Producttype, Bill
 
 class CustomerAdmin(admin.ModelAdmin):
     list_filter = ["first_name", "last_name"]
-    # list_display = ["last_name", "account"]
+    list_display = ["last_name", "account"]
     # fields = ["first_name", "last_name"]
     # readonly_fields = ["account"]
 
